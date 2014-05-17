@@ -1,0 +1,49 @@
+<head>
+  <title>quickchat</title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {{> chatRoom}}
+</body>
+
+<template name="chatRoom">
+
+<header>
+	{{#if username}}
+	<div class="logged-in">Logged in as {{username}}</div>
+	<div class="reset-username">Reset username</div>
+	{{else}}
+	<form id="username">
+		<input type="text" id="username">
+		<input type="submit" value="submit">
+	</form>
+	{{/if}}
+</header>
+
+  <h1>Sick Chat</h1>
+  <section class="chat-room">
+  <ul id="chats">
+  	{{#each chats}}
+  		{{> chat}}
+  	{{/each}}
+  </ul>
+  {{> newMessage}}
+  </section>
+</template>
+
+<template name="chat">
+  <li class="chat">
+  	<div class="username">{{username}}</div>
+  	<div class="message">{{message}}</div>
+  </li>
+</template>
+
+<template name="newMessage">
+  <form class="new-message">
+  	<input type="text" id="message">
+  	<input type="submit" value="send">
+  </form>
+</template>
+
+

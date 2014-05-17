@@ -1,0 +1,97 @@
+/* CSS declarations go here */
+
+html, body, h1, ul, li, div, form, section {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font: inherit;
+	font-family: sans-serif;
+	vertical-align: baseline;
+	line-height: normal;
+}
+
+.group {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
+input[type="submit"] {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font: inherit;
+	font-family: sans-serif;
+	vertical-align: baseline;
+	padding: 5px 10px;
+	margin: 5px 5px 5px 0;
+	font-weight: bold;
+	background: transparent;
+	border: 1px solid #ccc;
+}
+
+input[type="text"] {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font: inherit;
+	font-family: sans-serif;
+	vertical-align: baseline;
+	background: transparent;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #ccc;
+	width: 808px;	
+}
+
+h1 {
+	font-size: 48px;
+	text-align: center;
+	margin: 20px 0;
+}
+
+ul {
+	list-style: none;
+}
+
+section.chat-room {
+	width: 900px;
+	padding: 5px;
+	margin: auto;
+	border: 2px solid #333;
+	border-radius: 5px;
+}
+
+ul#chats {
+	height: 500px;
+	display: block;
+	overflow: auto;
+	margin: 5px;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+ul#chats li.chat {
+	font-size: 16px;
+	margin-bottom: 10px;
+	display: block;
+	/*border: 1px solid red;*/
+}
+
+li.chat > .username {
+	float: left;
+	width: 150px;
+	color: #333;
+	font-weight: bold;
+}
+
+li.chat > .message {
+	width: 739px;
+	float: right;
+	width: 650px;
+	color: #5a5a5a;	
+}
