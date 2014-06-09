@@ -5,6 +5,11 @@ if (Meteor.isClient) {
   Meteor.startup(function () { 
     var now = Date.now();
     Session.set("loginTime", now)
+      // clippy.load('Merlin', function(agent) {
+      //   // Do anything with the loaded agent
+      //   alert("working?")
+      //   agent.show();
+      // });
   })
 
   Template.chatRoom.chats = function () {
