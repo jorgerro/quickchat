@@ -2,21 +2,28 @@ var Chats = new Meteor.Collection("chats")
 
 if (Meteor.isClient) {
 
+    clippy.load('Merlin', function(agent) {
+
+      agent.show();
+    // agent.animate();
+    // agent.play('Searching');
+    // agent.play('Announce', 3000);
+    // console.log(agent.animations().toString())
+    agent.moveTo(880,0);
+    agent.speak('Choose a name, nerd!');
+    // agent.gestureAt(0,100);
+    // agent.play('Confused', 3000)
+    console.log(agent);
+    });
+
+
   Meteor.startup(function () {
     var now = Date.now();
     Session.set("loginTime", now)
-      clippy.load('Merlin', function(agent) {
-        // Do anything with the loaded agent
-        agent.show();
-        // agent.animate();
-        // agent.play('Searching');
-        agent.play('Announce', 3000);
-        console.log(agent.animations().toString())
-        agent.speak('Choose a name, nerd!');
-        agent.moveTo(880,0)
-        agent.gestureAt(0,100);
-        agent.play('Confused')
-      });
+      // clippy.load('Merlin', function(agent) {
+      //   agent.show();
+        // c.speak('starting up!');
+      // });
   })
 
   Template.chatRoom.chats = function () {
@@ -31,6 +38,7 @@ if (Meteor.isClient) {
         message: $message.val(), 
         username: Session.get("username"),
         timeCreated: Date.now()
+
       })
       $message.val("");
     }
@@ -61,6 +69,8 @@ if (Meteor.isClient) {
       Session.set("username", "")
     }
   })
+
+  // });
 
 }
 
