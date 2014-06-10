@@ -8,11 +8,14 @@ if (Meteor.isClient) {
       clippy.load('Merlin', function(agent) {
         // Do anything with the loaded agent
         agent.show();
-        agent.animate();
-        // agent.Play('Searching');
+        // agent.animate();
+        // agent.play('Searching');
+        agent.play('Announce');
+        console.log(agent.animations().toString())
         agent.speak('Choose a name, nerd!');
-        agent.moveTo(850,0)
+        agent.moveTo(880,0)
         agent.gestureAt(0,100);
+        agent.play('Confused')
       });
   })
 
