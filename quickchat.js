@@ -2,14 +2,18 @@ var Chats = new Meteor.Collection("chats")
 
 if (Meteor.isClient) {
 
-  Meteor.startup(function () { 
+  Meteor.startup(function () {
     var now = Date.now();
     Session.set("loginTime", now)
-      // clippy.load('Merlin', function(agent) {
-      //   // Do anything with the loaded agent
-      //   alert("working?")
-      //   agent.show();
-      // });
+      clippy.load('Merlin', function(agent) {
+        // Do anything with the loaded agent
+        agent.show();
+        agent.animate();
+        // agent.Play('Searching');
+        agent.speak('Choose a name, nerd!');
+        agent.moveTo(850,0)
+        agent.gestureAt(0,100);
+      });
   })
 
   Template.chatRoom.chats = function () {
