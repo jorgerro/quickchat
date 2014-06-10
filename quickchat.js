@@ -10,7 +10,7 @@ if (Meteor.isClient) {
         agent.show();
         // agent.animate();
         // agent.play('Searching');
-        agent.play('Announce');
+        agent.play('Announce', 3000);
         console.log(agent.animations().toString())
         agent.speak('Choose a name, nerd!');
         agent.moveTo(880,0)
