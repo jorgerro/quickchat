@@ -3,20 +3,21 @@ var Chats = new Meteor.Collection("chats")
 if (Meteor.isClient) {
 
     clippy.load('Merlin', function(agent) {
-
-      agent.show();
+    agent.show();
+    // window.setTimeout(function () {
+    //   agent.hide();
+    // }, 50000);
     // agent.animate();
     // agent.play('Searching');
-    // agent.play('Announce', 3000);
-    // console.log(agent.animations().toString())
+    agent.play('Announce', 3000);
+    console.log(agent.animations().toString())
     agent.moveTo(880,0);
-    agent.speak('Choose a name, nerd!');
-    // agent.gestureAt(0,100);
+    agent.speak('Choose a name!');
+    agent.gestureAt(0,100);
     // agent.play('Confused', 3000)
     console.log(agent);
     });
-
-
+  
   Meteor.startup(function () {
     var now = Date.now();
     Session.set("loginTime", now)

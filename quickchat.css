@@ -58,12 +58,34 @@ ul {
 	list-style: none;
 }
 
+div.logged-in {
+	font-size: 16px;
+	margin: 10px;
+
+}
+
+div.reset-username {
+	font-size: 16px;
+	padding: 10px 20px;
+	background-color: blue;
+	color: white;
+	display: inline-block;
+	border-radius: 5px;
+	font-weight: bold;
+	margin: 10px;
+}
+
+div.reset-username:hover {
+	cursor: pointer;
+}
+
 section.chat-room {
 	width: 900px;
 	padding: 5px;
 	margin: auto;
 	border: 2px solid #333;
 	border-radius: 5px;
+	margin-bottom: 40px;
 }
 
 ul#chats {

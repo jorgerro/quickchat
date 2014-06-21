@@ -11,10 +11,12 @@
 
 <header>
 	{{#if username}}
-	<div class="logged-in">Logged in as {{username}}</div>
+	<div class="logged-in">Logged in as "{{username}}"</div>
 	<div class="reset-username">Reset username</div>
 	{{else}}
+
 	<form id="username">
+    <label for="username">Username:</label><br>
 		<input type="text" id="username">
 		<input type="submit" value="submit">
 	</form>
